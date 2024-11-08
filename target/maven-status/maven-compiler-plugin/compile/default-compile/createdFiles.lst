@@ -1,0 +1,7 @@
+com\tabarak\useraccess\utils\Database.class
+com\tabarak\useraccess\ApprovalServlet.class
+com\tabarak\useraccess\SoftwareServlet.class
+com\tabarak\useraccess\LogoutServlet.class
+com\tabarak\useraccess\LoginServlet.class
+com\tabarak\useraccess\RequestServlet.class
+com\tabarak\useraccess\SignUpServlet.class
