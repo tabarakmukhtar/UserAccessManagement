@@ -97,8 +97,8 @@ Managers can view and approve/reject these requests.
 Add Software: Admin users can add new software through /createSoftware.jsp.
 Logout: Use the logout link to end the session.
 
+## Project Structure
 
-Project Structure
 UserAccessManagement/
 ├── src/
 │   ├── main/
@@ -125,6 +125,7 @@ UserAccessManagement/
 │   │           ├── web.xml
 ├── pom.xml
 └── README.md
+
 
 ## Troubleshooting
 404 Errors: Ensure that Tomcat is running and that servlets are mapped correctly in web.xml.
