@@ -128,7 +128,11 @@ UserAccessManagement/
 ├── pom.xml
 └── README.md
 
-## Demo
+## Live Demo
+
+[View the live project here] https://tabarakmukhtar.github.io/UserAccessManagement/
+
+## Demo Video
 
 [Download the video demo](assets/DemoVideo.mp4)
 
