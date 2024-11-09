@@ -32,11 +32,11 @@ cd UserAccessManagement
 ### 2. Configure the Database
 Open PostgreSQL and create a new database:
 
-sql
+
 CREATE DATABASE user_access_management;
 Create the required tables by running the following SQL commands:
 
-sql
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
@@ -80,8 +80,8 @@ Access the application at http://localhost:8080/UserAccessManagement.
 
 ### 5. Initial User Setup (Optional)
 You can manually insert initial user records in the users table for testing:
-
 sql
+
 INSERT INTO users (username, password, role) VALUES ('admin', 'hashed_password_here', 'Admin');
 INSERT INTO users (username, password, role) VALUES ('manager', 'hashed_password_here', 'Manager');
 INSERT INTO users (username, password, role) VALUES ('employee', 'hashed_password_here', 'Employee');
@@ -98,7 +98,7 @@ Add Software: Admin users can add new software through /createSoftware.jsp.
 Logout: Use the logout link to end the session.
 
 
-## Project Structure
+Project Structure
 UserAccessManagement/
 ├── src/
 │   ├── main/
