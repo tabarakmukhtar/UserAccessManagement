@@ -1,7 +1,7 @@
 # User Access Management System
 The User Access Management System is a web-based application for managing user access to software applications within an organization. It allows users to sign up, log in, request access to software, and enables managers to approve or reject these requests. Admins have additional privileges to add new software applications.
 
-Features
+# Features
 User Registration: New users can register with a default role of "Employee."
 User Authentication: Registered users can log in to the system.
 Role-Based Access:
@@ -25,20 +25,17 @@ PostgreSQL (version 9.5 or later)
 Maven (for building the project)
 Setup Instructions
 1. Clone the Repository
-bash
-Copy code
+
 git clone <repository-url>
 cd UserAccessManagement
 2. Configure the Database
 Open PostgreSQL and create a new database:
 
 sql
-Copy code
 CREATE DATABASE user_access_management;
 Create the required tables by running the following SQL commands:
 
 sql
-Copy code
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
@@ -63,8 +60,7 @@ CREATE TABLE requests (
 );
 Update database connection details in Database.java:
 
-java
-Copy code
+
 private static final String URL = "jdbc:postgresql://localhost:5432/user_access_management";
 private static final String USER = "your_database_username";
 private static final String PASSWORD = "your_database_password";
