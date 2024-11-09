@@ -100,6 +100,8 @@ Logout: Use the logout link to end the session.
 ## Project Structure
 
 UserAccessManagement/
+├── assets/
+│   └── DemoVideo.mp4
 ├── src/
 │   ├── main/
 │   │   ├── java/
