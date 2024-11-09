@@ -126,6 +126,9 @@ UserAccessManagement/
 ├── pom.xml
 └── README.md
 
+## Demo
+
+[Download the video demo](assets/DemoVideo.mp4)
 
 ## Troubleshooting
 404 Errors: Ensure that Tomcat is running and that servlets are mapped correctly in web.xml.
