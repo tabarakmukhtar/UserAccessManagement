@@ -1,7 +1,7 @@
 # User Access Management System
 The User Access Management System is a web-based application for managing user access to software applications within an organization. It allows users to sign up, log in, request access to software, and enables managers to approve or reject these requests. Admins have additional privileges to add new software applications.
 
-# Features
+## Features
 User Registration: New users can register with a default role of "Employee."
 User Authentication: Registered users can log in to the system.
 Role-Based Access:
@@ -11,24 +11,25 @@ Admin: Can add new software applications.
 Software Management: Admins can add and manage software applications.
 Request Management: Managers can approve or reject access requests.
 
-Technology Stack
+## Technology Stack
 Backend: Java Servlets
 Frontend: JSP, HTML, CSS, JavaScript
 Database: PostgreSQL
 Build Tool: Maven
 Server: Apache Tomcat
 
-Prerequisites
+## Prerequisites
 Java (version 8 or later)
 Apache Tomcat (version 9 or later)
 PostgreSQL (version 9.5 or later)
 Maven (for building the project)
 Setup Instructions
-1. Clone the Repository
+### 1. Clone the Repository
 
 git clone <repository-url>
 cd UserAccessManagement
-2. Configure the Database
+
+### 2. Configure the Database
 Open PostgreSQL and create a new database:
 
 sql
@@ -58,25 +59,26 @@ CREATE TABLE requests (
     reason TEXT,
     status VARCHAR(20) DEFAULT 'Pending'
 );
-Update database connection details in Database.java:
 
+### Update database connection details in Database.java:
 
 private static final String URL = "jdbc:postgresql://localhost:5432/user_access_management";
 private static final String USER = "your_database_username";
 private static final String PASSWORD = "your_database_password";
-3. Build the Project
-Run the following command to build the project using Maven:
 
+### 3. Build the Project
+Run the following command to build the project using Maven:
 bash
 mvn clean install
-4. Deploy on Tomcat
+
+### 4. Deploy on Tomcat
 Copy the generated WAR file (target/UserAccessManagement.war) to the Tomcat webapps directory.
 Start the Tomcat server by running:
-
 bash
 <TOMCAT_HOME>/bin/startup.sh
 Access the application at http://localhost:8080/UserAccessManagement.
-5. Initial User Setup (Optional)
+
+### 5. Initial User Setup (Optional)
 You can manually insert initial user records in the users table for testing:
 
 sql
@@ -85,18 +87,18 @@ INSERT INTO users (username, password, role) VALUES ('manager', 'hashed_password
 INSERT INTO users (username, password, role) VALUES ('employee', 'hashed_password_here', 'Employee');
 (Replace 'hashed_password_here' with actual hashed values.)
 
-Usage
+### Usage
 Sign Up: Go to /signup.jsp to create a new account as an "Employee."
 Login: Access the login page at /login.jsp.
 
-Request Access:
+### Request Access:
 Employees can request access to software applications.
 Managers can view and approve/reject these requests.
 Add Software: Admin users can add new software through /createSoftware.jsp.
 Logout: Use the logout link to end the session.
 
 
-Project Structure
+## Project Structure
 UserAccessManagement/
 ├── src/
 │   ├── main/
@@ -123,6 +125,7 @@ UserAccessManagement/
 │   │           ├── web.xml
 ├── pom.xml
 └── README.md
-Troubleshooting
+
+## Troubleshooting
 404 Errors: Ensure that Tomcat is running and that servlets are mapped correctly in web.xml.
 Database Connection Issues: Verify PostgreSQL credentials in Database.java and ensure the PostgreSQL server is running.
